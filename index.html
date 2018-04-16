@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.scss"/>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="js/daohang.js"></script>
+    <script src="js/ajax_jj.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/goodalist.js"></script>
+    <script src="js/maomao.js"></script>
+    <script src="js/you.js"></script>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById("btn").getElementsByTagName("li");
+             var divs = document.getElementById("divs").getElementsByTagName("div");
+             var btns = document.getElementById("btns").getElementsByTagName("li");
+             var di = document.getElementById("di").getElementsByTagName("div");
+              var bt = document.getElementById("bt").getElementsByTagName("li");
+             var dix = document.getElementById("dix").getElementsByTagName("div");
+              var bte = document.getElementById("bte").getElementsByTagName("li");
+             var dd = document.getElementById("dd").getElementsByTagName("div");
+              var bss = document.getElementById("bss").getElementsByTagName("li");
+             var dss = document.getElementById("dss").getElementsByTagName("div");
+            for(var i=0;i<btn.length;i++)
+            {
+                btn[i].index = i;  
+                btn[i].onmouseenter = function(){
+                    //所有的btn类名清空
+                    for(var j=0;j<btn.length;j++)
+                    {
+                        btn[j].className = "";
+                    }
+                    // 当前的那个鼠标移入的添加 类名为gao
+                    
+                    this.className = "gao";
+
+                    //先隐藏下面的div盒子
+                
+                    for(var i=0;i<divs.length;i++)
+                    {
+                        divs[i].style.display = "none";
+                    }
+
+                    divs[this.index].style.display ="block";
+                }
+            }
+            for(var i=0;i<btns.length;i++)
+            {
+                btns[i].index = i;  
+                btns[i].onmouseenter = function(){
+                    //所有的btn类名清空
+                    for(var j=0;j<btns.length;j++)
+                    {
+                        btns[j].className = "";
+                    }
+                    // 当前的那个鼠标移入的添加 类名为gao
+                    
+                    this.className = "gao";
+
+                    //先隐藏下面的div盒子
+                
+                    for(var i=0;i<di.length;i++)
+                    {
+                        di[i].style.display = "none";
+                    }
+
+                    di[this.index].style.display ="block";
+                }
+            }
+            for(var i=0;i<bt.length;i++)
+            {
+                bt[i].index = i;  
+                bt[i].onmouseenter = function(){
+                    //所有的btn类名清空
+                    for(var j=0;j<bt.length;j++)
+                    {
+                        bt[j].className = "";
+                    }
+                    // 当前的那个鼠标移入的添加 类名为gao
+                    
+                    this.className = "gao";
+
+                    //先隐藏下面的div盒子
+                
+                    for(var i=0;i<dix.length;i++)
+                    {
+                        dix[i].style.display = "none";
+                    }
+
+                    dix[this.index].style.display ="block";
+                }
+            }
+            for(var i=0;i<bte.length;i++)
+            {
+                bte[i].index = i;  
+                bte[i].onmouseenter = function(){
+                    //所有的btn类名清空
+                    for(var j=0;j<bte.length;j++)
+                    {
+                        bte[j].className = "";
+                    }
+                    // 当前的那个鼠标移入的添加 类名为gao
+                    
+                    this.className = "gao";
+
+                    //先隐藏下面的div盒子
+                
+                    for(var i=0;i<dd.length;i++)
+                    {
+                        dd[i].style.display = "none";
+                    }
+
+                    dd[this.index].style.display ="block";
+                }
+            }
+              for(var i=0;i<bss.length;i++)
+            {
+                bss[i].index = i;  
+                bss[i].onmouseenter = function(){
+                    //所有的btn类名清空
+                    for(var j=0;j<bss.length;j++)
+                    {
+                        bss[j].className = "";
+                    }
+                    // 当前的那个鼠标移入的添加 类名为gao
+                    
+                    this.className = "gao";
+
+                    //先隐藏下面的div盒子
+                
+                    for(var i=0;i<dss.length;i++)
+                    {
+                        dss[i].style.display = "none";
+                    }
+
+                    dss[this.index].style.display ="block";
+                }
+            }
+        }
+    </script>
+     
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="zuo fl" style="margin-top:0;">
+                <ul>
+                    <i class="shou"></i>
+                    <li><a href="#">收藏波奇商城</a></li>
+                    <i class="guang"></i>
+                    <li><a href="#">广东</a></li>
+                </ul>
+            </div>
+            <div class="you fr">
+                <ul>
+                    <li><a href="http://localhost:1801/html/denglv.html">登录<span>|</span></a></li>
+                    <li><a href="http://localhost:1801/html/zhuce.html">注册<span>|</span></a></li>
+                    <li><a href="#">手机版<span>|</span></a> 
+                        <div class="shoujiban">
+                            <ul>
+                                <li>
+                                    <img src="images/wb.gif" alt="" />
+                                </li>
+                                <li>
+                                    <span><a href="#">波奇宠物APP</a></span>
+                                    <span><a href="#">注册立享499元</a></span>
+                                    <span><a href="#">首单再送100元</a></span>
+                                    <a href="#"><i class="anzhuo">
+                                    </i></a>
+                                    <a href="#"><i class="pingguo">
+                                    </i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">关注波奇<span>|</span></a>
+                        <div class="boqi">
+                            <ul>
+                                <li>
+                                   <img src="images/wb.gif" alt="" />
+                                   <p><a href="#">官网微信</a></p>
+                                   <p class="p1"><a href="">Poqiiwang</p></a>
+                                </li>
+                                <li>
+                                    <img src="images/wb.gif" alt="" />
+                                    <p><a href="#">官网微博</a></p>
+                                    <p class="p1"><a href="#">波奇网</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <i class="shoufen"></i>
+                    <li style="padding-left:18px;"><a href="#">波奇首页</a>
+                    <div class="souye">
+                        <i class="fu"></i>
+                        <p>波奇服务</p>
+                        <i class="lun"></i>
+                        <p>波奇论坛</p>
+                        <i class="chong"></i>
+                        <p>宠物百科</p>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tu container">
+        <a href="#"><h2></h2></a>
+    </div>
+    <div id="logo">
+        <div class="container">
+            <div class="logo fl">
+                <a href="file:///C:/Users/C/Desktop/src/index.html"><h1></h1></a>
+            </div>
+            <div class="shousuo">
+                <input type="text" value="宠物窝垫"/ >
+                <button class="btn">搜索</button>
+                <p>
+                <li class="no">热门搜索:&nbsp;</li>
+                <li class="no"><a href="#"><span>进口狗粮</span></a></li>
+                <li><a href="#">进口猫粮</a></li>
+                <li><a href="#">猫厕所</a></li>
+                <li><a href="#">猫笼</a></li>
+                <li><a href="#">口腔护理</a></li>
+                <li><a href="#">眉毛护肤</a></li> 
+                </p>
+            </div>
+            <div class="logo2 fr">
+                <a href="file:///C:/Users/C/Desktop/src/index.html"><h2></h2></a>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="container">
+            <ul> 
+                 <h2 class="fl">全部商品分类</h2>
+                <li><a href="#">首页</a></li>
+                <li><a href="http://localhost:1801/html/list.html">狗狗</a></li>
+                <li><a href="#">猫猫</a></li>
+                <li><a href="#">小宠</a></li>
+                <li><a href="#">水族</a></li>
+                <li><a href="#">全球购</a></li>
+                <li><a href="#">创意生活</a></li>
+                <li><a href="#">品牌馆</a></li>
+                <li><a href="#">波奇服务</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="container">
+            <div class="zuo fl">
+                <ul>
+                    <li>
+                        <dl class="zuo1">
+                            <dd>
+                                <i class="gougou"></i>
+                                <a href="#"><h2>狗狗商品</h2></a>
+                                <b><a href="#">主粮</a></b><b><a href="">零食</a></b><b><a href="#">医疗</a></b><br>
+                                <b><a href="#">保健</a></b><b><a href="#">出行</a></b><b><a href="#">日用</a></b><br>
+                                <b><a href="#">玩具</a></b><b><a href="#">美容</a></b>
+                            </dd>
+                        </dl>
+                            <ul class="nihao">
+                                <li><a href="#" class="bian">狗狗主粮</a> | <a href="#"><strong>进口粮</strong></a>&nbsp;&nbsp;| <a href="#"><strong>国产粮</strong></a>&nbsp;&nbsp;| <a href="#"><strong>冻干粮</strong></a></li>
+                                <li>
+                                    <a href="#" class="bian">狗狗零食</a> | <a href="#"><strong>罐头湿粮</strong></a> | <a href="#"><strong>肉类零食</strong></a>| <a href="#"><strong>磨牙洁牙</strong></a><a href="#"><strong>奶酪饼干</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">医理护理</a> | <a href="#"><strong>皮肤治疗</strong></a> | <a href="#"><strong>综合护理</strong></a>| <a href="#"><strong>内外驱虫</strong></a>|<a href="#"><strong>常备药用</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">营养保健</a> | <a href="#"><strong>毛发护理</strong></a> | <a href="#"><strong>补钙健骨</strong></a>| <a href="#"><strong>肠胃调理</strong></a>|<a href="#"><strong>综合营养</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">生活日用</a> | <a href="#"><strong>狗狗用具</strong></a>| <a href="#"><strong>狗狗住所</strong></a>|<a href="#"><strong>排便清洁</strong></a>|<a href="#"><strong>服饰装饰</strong></a>|<a href="#"><strong>训练用品</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">出行装备</a> | <a href="#"><strong>航空箱包</strong></a> | <a href="#"><strong>牵引系列</strong></a>| <a href="#"><strong>胸背套装</strong></a>|<a href="#"><strong>项圈狗牌</strong></a>|<a href="#"><strong>外出辅助</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">狗狗美容</a> | <a href="#"><strong>洗护香波</strong></a> | <a href="#"><strong>梳剪工具</strong></a>| <a href="#"><strong>洗澡用品</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">狗狗玩具</a> | <a href="#"><strong>益智玩具</strong></a> | <a href="#"><strong>磨牙玩具</strong></a>| <a href="#"><strong>训练玩具</strong></a>|<a href="#"><strong>漏食玩具</strong></a>|<a href="#"><strong>互动玩具</strong></a>|<a href="#"><strong>毛绒玩具</strong></a>
+                                </li>
+                            </ul>
+                    </li>
+                    <li>
+                        <dl class="zuo1">
+                            <dd>
+                                <i class="maomao"></i>
+                                <a href="#"><h2>猫猫商品</h2></a>
+                                <b><a href="#">主粮</a></b><b><a href="">零食</a></b><b><a href="#">医疗</a></b><br>
+                                <b><a href="#">保健</a></b><b><a href="#">出行</a></b><b><a href="#">日用</a></b><br>
+                                <b><a href="#">玩具</a></b><b><a href="#">美容</a></b>
+                            </dd>
+                        </dl>
+                           <ul class="nihao">
+                                <li><a href="#" class="bian">猫猫主粮</a> | <a href="#"><strong>进口粮</strong></a>&nbsp;&nbsp;&nbsp; | <a href="#"><strong>国产粮</strong></a>&nbsp; &nbsp;|<a href="#"><strong>冻干粮</strong></a></li>
+                                <li>
+                                    <a href="#" class="bian">猫猫零食</a> | <a href="#"><strong>罐头湿粮</strong></a> | <a href="#"><strong>肉类零食</strong></a>| <a href="#"><strong>磨牙洁牙</strong></a><a href="#"><strong>奶酪饼干</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">医理护理</a> | <a href="#"><strong>皮肤治疗</strong></a> | <a href="#"><strong>综合护理</strong></a> | <a href="#"><strong>内外驱虫</strong></a> | <a href="#"><strong>常备药用</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">营养保健</a> | <a href="#"><strong>毛发护理</strong></a> | <a href="#"><strong>补钙健骨</strong></a> | <a href="#"><strong>肠胃调理</strong></a>|<a href="#"><strong>综合营养</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">生活日用</a> |<a href="#"><strong>猫猫用具</strong></a>| <a href="#"><strong>猫猫住所</strong></a>|<a href="#"><strong>排便清洁</strong></a>|<a href="#"><strong>服饰装饰</strong></a>|<a href="#"><strong>训练用品</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">出行装备</a> | <a href="#"><strong>航空箱包</strong></a> | <a href="#"><strong>牵引系列</strong></a>| <a href="#"><strong>胸背套装</strong></a>|<a href="#"><strong>项圈猫牌</strong></a>|<a href="#"><strong>外出辅助</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">狗狗美容</a> | <a href="#"><strong>洗护香波</strong></a> | <a href="#"><strong>梳剪工具</strong></a>| <a href="#"><strong>洗澡用品</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">猫猫玩具</a> | <a href="#"><strong>益智玩具</strong></a> | <a href="#"><strong>磨牙玩具</strong></a>| <a href="#"><strong>训练玩具</strong></a>|<a href="#"><strong>漏食玩具</strong></a>|<a href="#"><strong>互动玩具</strong></a>|<a href="#"><strong>毛绒玩具</strong></a>
+                                </li>
+                            </ul>
+                    </li>
+                    <li>
+                       <dl class="zuo2">
+                            <dd>
+                                <i class="xiaochong"></i>
+                                <h2>奇趣小宠</h2>
+                                <b><a href="#">兔子</a></b><b><a href="#">仓鼠</a></b><b><a href="#">龙猫</a></b>
+                                <b><a href="#">金鱼</a></b><b><a href="#">鹦鹉</a></b><b><a href="#">蜈蚣</a></b>
+                            </dd>
+                        </dl>
+                            <ul class="nihao">
+                                <li><a href="#" class="bian">兔子</a> | <a href="#"><strong>兔粮</strong></a> | <a href="#"><strong>用具</strong></a>| <a href="#"><strong>笼窝</strong></a></li>
+                                <li>
+                                    <a href="#" class="bian">仓鼠</a> | <a href="#"><strong>笼窝</strong></a> | <a href="#"><strong>器具</strong></a>| <a href="#"><strong>玩具</strong></a><a href="#"><strong>磨牙</strong></a><a href="#"><strong>清洁</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">龙猫</a> | <a href="#"><strong>龙猫粮</strong></a> | <a href="#"><strong>笼窝</strong></a>| <a href="#"><strong>用具</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">天竺鼠</a>|<a href="#"><strong>天竺鼠粮</strong></a> | <a href="#"><strong>笼窝</strong></a>| <a href="#"><strong>玩具</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">乌龟</a> | <a href="#"><strong>龟粮</strong></a>| <a href="#"><strong>龟箱</strong></a>|<a href="#"><strong>医疗</strong></a>|<a href="#"><strong>器材</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">蜥蜴</a> | <a href="#"><strong>器材</strong></a> 
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">鸟类</a> | <a href="#"><strong>饲料</strong></a>
+                                </li>
+                            </ul>
+                    </li>
+                    <li>
+                        <dl class="zuo2">
+                            <dd>
+                                <i class="shui"></i>
+                                <h2>水族市场</h2>
+                                <b><a href="#">鱼料</a></b><b><a href="">鱼缸</a></b><b><a href="#">器材</a></b><br>
+                                <b><a href="#">药水</a></b><b><a href="#">造景</a></b><b><a href="#">杀菌</a></b>
+                            </dd>
+                        </dl>
+                            <ul class="nihao nihao4">
+                                <li><a href="#" class="bian">鱼粮</a> | <a href="#"><strong>鱼粮</strong> </a>|<a href="#"><strong>喂鱼器</strong></a></li>
+                                <li>
+                                    <a href="#" class="bian">药水</a> | <a href="#"><strong>硝化细菌</strong></a> | <a href="#"><strong>水质处理</strong></a>| <a href="#"><strong>以防疾病</strong></a>| <a href="#"><strong>仰菌杀菌</strong></a>| <a href="#"><strong>水草肥料</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">器材</a> | <a href="#"><strong>过滤器</strong></a> | <a href="#"><strong>滤材</strong></a>| <a href="#"><strong>增气泵</strong></a>|<a href="#"><strong>增水泵</strong></a>| <a href="#"><strong>以温控设备</strong></a>| <a href="#"><strong>照明设备</strong></a>| <a href="#"><strong>清洁用具</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">鱼缸</a> | <a href="#"><strong>小型鱼缸</strong></a> | <a href="#"><strong>中型鱼缸</strong></a>| <a href="#"><strong>大型鱼缸</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">造景</a> | <a href="#"><strong>造景装饰</strong></a> 
+                                </li>
+                            </ul>
+                    </li>
+                    <li>
+                        <dl style="border-bottom:0;" class="zuo2 ;">
+                            <dd>
+                                <i class="meng"></i>
+                                <h2>萌宠周边</h2>
+                                <b><a href="#">布艺</a></b><b><a href="#">装饰</a></b><b><a href="#">家居</a></b>
+                                <b><a href="#">服饰</a></b><b><a href="#">猫垫</a></b><b><a href="#">挂饰</a></b>
+                            </dd>
+                        </dl>
+                            <ul class="nihao nihao5">
+                                <li><a href="#" class="bian">饮食用品</a> | <strong>杯子</strong> | <strong>碗具</strong>| <strong>餐垫</strong></li>
+                                <li>
+                                    <a href="#" class="bian">布艺生活</a> | <a href="#"><strong>抱枕枕靠</strong></a> | <a href="#"><strong>公仔玩偶</strong></a>| <a href="#"><strong>门帘布盖</strong></a>| <a href="#"><strong>口罩眼罩</strong></a>| <a href="#"><strong>居家服饰</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">生活家居</a> | <a href="#"><strong>电子周边</strong></a> | <a href="#"><strong>居家用品</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">出行箱包</a> | <a href="#"><strong>宠物背包</strong></a> | <a href="#"><strong>挎包零食包</strong></a>| <a href="#"><strong>车载用品</strong></a>|<a href="#"><strong>其他用品</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="bian">装饰工艺</a> | <a href="#"><strong>工艺礼品</strong></a> | <a href="#"><strong>墙画壁画</strong></a>| <a href="#"><strong>珠宝饰品</strong></a>|<a href="#"><strong>装饰摆饰</strong></a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="zhong fl">
+                 <div class="a-content">
+                        <div class="carousel-content">
+                        <ul class="carousel">
+                            <li><img src="images/dd/b5.jpg"></li>
+                            <li><img src="images/dd/b4.jpg"></li>
+                            <li><img src="images/dd/b3.jpg"></li>
+                            <li><img src="images/dd/b2.jpg"></li>
+                            <li><img src="images/dd/b1.jpg"></li>
+                        </ul>
+                        <ul class="img-index"></ul>
+                       <!--  <div class="carousel-prev"><img src="images/dd/left1.png"></div>
+                        <div class="carousel-next"><img src="images/dd/right2.png"></div> -->
+                    </div>
+                </div>
+                <div class="zxia">
+                    <a href="#"><img src="images/dd/l1.jpg" alt=""  class="fl"  style="margin-right:2px;" /></a>
+                    <a href="#"><img src="images/dd/l2.jpg" alt="" class="fl" style="margin-right:2px;"/></a>
+                    <a href="#"><img src="images/dd/l3.jpg" alt="" class="fl"/></a>
+                </div>
+            </div>
+            <div class="you fr">
+               <ul>
+                   <li>
+                       <a href="#"><img src="images/qq.jpg" alt="" /></a>
+                   </li>
+                   <li class="youo">
+                       <img src="images/chongwu.jpg" alt="" />
+                   </li>
+                   <li class="ooo">
+                       <img src="images/dd/l6.jpg" alt=""/>
+                       <p class="p1">
+                           波奇客户端
+                       </p>
+                       <p class="p2">
+                           注册立享499，
+                       </p>
+                       <p class="p3">
+                        首单再送1000
+                       </p>
+                   </li>
+               </ul>
+            </div>
+        </div>
+    </div>
+    <div id="zhuangchan">
+        <div class="container">
+            <div class="shang">
+                <ul>
+                    <li class="fl ss">
+                        <a href="#">火爆商品</a>
+                    </li>
+                    <li class="fr sa">
+                        <a href="http://localhost:1801#o">换一批</a>
+                    </li>
+                </ul>
+                <div class="shang1" id="o">
+                    
+                </div>
+            </div>
+            <div class="xia">
+                <ul>
+                    <li class="fl ss">
+                        <a href="#">知名品牌&nbsp;放心选择</a>
+                    </li>
+                    <li class="fr sa">
+                        <a href="#">更多产品》</a>
+                    </li>
+                </ul>
+                <div class="xia1">
+                   <div class="x1 fl" >
+                       <a href="#"><img src="images/dd/g1.jpg" alt="" /></a>
+                   </div>
+                   <div class="x2 fl">
+                       <a href="#"><img src="images/dd/g2.jpg" alt="" style="margin-bottom: 10px;" /></a>
+                       <a href="#"><img src="images/dd/g3.jpg" alt="" /></a>
+                   </div>
+                   <div class="x3 fl">
+                       <a href="#"><img src="images/dd/g4.jpg" alt="" /></a>
+                   </div>
+                   <div class="x4 fl">
+                       <a href="#"><img src="images/dd/g5.jpg" alt="" style="margin-bottom: 10px;"/></a>
+                       <a href="#"><img src="images/dd/g6.jpg" alt="" /></a>
+                   </div>
+                   <div class="x5 fl">
+                       <a href="#"><img src="images/dd/g7.jpg" alt="" /></a>
+                   </div>
+                   <div class="x6 fr">
+                       <a href="#"><img src="images/dd/g10.jpg" alt="" style="margin-bottom: 10px;"/></a>
+                       <a href="#"><img src="images/dd/g9.jpg" alt="" /></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shangpin">
+        <div class="container">
+            <div class="shangpin1">
+                <div class="zuo fl">
+                   <i class="gougoua"></i>
+                   <h2><a href="#">狗狗商品</a></h2>
+                   <div class="zuo1">
+                     <a href="#"><img src="images/gg/001.jpg" alt="" /></a>
+                   </div>
+                </div>
+                <div class="you youy fr">
+                    <h2>波奇推荐</h2>
+                </div>
+                <div class="zhong fl">
+                    <ul id="btn">
+                        <li><a href="#">狗粮</a></li>
+                        <li><a href="#">湿粮</a></li>
+                        <li><a href="#">零食</a></li>
+                        <li><a href="#">保健品</a></li>
+                        <li><a href="#">医疗</a></li>
+                        <li><a href="#">沐浴露</a></li>
+                        <li><a href="#">日用品</a></li>
+                        <li><a href="#">美容</a></li>
+                        <li><a href="#">玩具</a></li>
+                        <li><a href="#">衣服窝</a></li>
+                    </ul>
+                    <div id="divs">
+                        <div class="zhong1" style="display:block;">
+
+                        </div>
+                        <div class="zhong1 zhong2">
+                           
+                        </div>
+                        <div class="zhong1 zhong3">
+                          
+                        </div>
+                        <div class="zhong1 zhong4">
+                            
+                        </div>
+                        <div class="zhong1 zhong5">
+                        </div>
+                        <div class="zhong1 zhong6">
+                            
+                        </div>
+                        <div class="zhong1 zhong7">
+                            
+                        </div>
+                        <div class="zhong1 zhong8">
+                        </div>
+                        <div class="zhong1 zhong9">
+                        </div>
+                        <div class="zhong1 zhong10">
+                        </div>
+                    </div>
+                    <div class="xia">
+                       <dl>
+                           <dd><a href="#"><img src="images/dd/1.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/2.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/3.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/4.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/5.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/6.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/7.jpg" alt="" /></a></dd>
+                           <dd style="border-right:0;"><a href="#"><img src="images/dd/8.jpg" alt="" /></a></dd>
+                       </dl>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div>
+    <div id="maomao">
+        <div class="container">
+            <div class="shangpin1">
+                <div class="zuo fl">
+                   <i class="maomao1"></i>
+                   <h2><a href="#">猫猫商品</a></h2>
+                   <div class="zuo1">
+                     <a href="#"><img src="images/gg/002.jpg" alt="" /></a>
+                   </div>
+                </div>
+                <div class="you youyy fr">
+                    <h2>波奇推荐</h2>
+                </div>
+                <div class="zhong fl">
+                    <ul id="bt">
+                        <li><a href="#">猫粮</a></li>
+                        <li><a href="#">湿粮</a></li>
+                        <li><a href="#">零食</a></li>
+                        <li><a href="#">保健品</a></li>
+                        <li><a href="#">香波</a></li>
+                        <li><a href="#">医疗</a></li>
+                        <li><a href="#">玩具</a></li>
+                        <li><a href="#">衣服窝</a></li>
+                        <li><a href="#">日用品</a></li>
+                        <li><a href="#">美容</a></li>
+                    </ul>
+                    <div id="dix">
+                        <div class="zhong1 zhong11" style="display:block;">
+
+                        </div>
+                        <div class="zhong1 zhong12">
+                            
+                        </div>
+                        <div class="zhong1 zhong13">
+                           
+                        </div>
+                        <div class="zhong1 zhong14">
+                           
+                        </div>
+                        <div class="zhong1 zhong15">
+                            
+                        </div>
+                        <div class="zhong1 zhong16">
+                           
+                        </div>
+                        <div class="zhong1 zhong17">
+                           
+                        </div>
+                        <div class="zhong1 zhong18">
+                           
+                        </div>
+                        <div class="zhong1 zhong19">
+                           
+                        </div>
+                        <div class="zhong1 zhong20">
+                        </div>
+                    </div>
+                    <div class="xia">
+                        <dl>
+                           <dd><a href="#"><img src="images/dd/3.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/10.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/11.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/12.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/13.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/14.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/15.jpg" alt="" /></a></dd>
+                           <dd style="border-right:0;"><a href="#"><img src="images/dd/16.jpg" alt="" /></a></dd>
+                       </dl>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div>
+    <div id="chongwu">
+        <div class="container">
+            <div class="shangpin1">
+                <div class="zuo fl">
+                   <i class="chongwu1"></i>
+                   <h2><a href="#">小宠商品</a></h2>
+                   <div class="zuo1">
+                     <a href="#"><img src="images/gg/004.jpg" alt="" /></a>
+                   </div>
+                </div>
+                <div class="you youyyy fr">
+                    <h2>波奇推荐</h2>
+                </div>
+                <div class="zhong fl">
+                    <ul id="btns">
+                        <li><a href="#">兔兔用品</a></li>
+                        <li><a href="#">仓鼠用品</a></li>
+                        <li><a href="#">龙猫用品</a></li>
+                        <li><a href="#">天竺鼠用品</a></li>
+                        <li><a href="#">鸟类饲料</a></li>
+                        <li><a href="#">仓鼠饲料</a></li>
+                        <li><a href="#">龙猫饲料</a></li>
+                        <li><a href="#">兔兔饲料</a></li>
+                    </ul>
+                    <div id="di">
+                        <div class="zhong1 zhong31" style="display:block;">
+
+                        </div>
+                        <div class="zhong1 zhong32">
+                            
+                        </div>
+                        <div class="zhong1 zhong33">
+                            
+                        </div>
+                        <div class="zhong1 zhong34">
+                            
+                        </div>
+                        <div class="zhong1 zhong35">
+                           
+                        </div>
+                        <div class="zhong1 zhong36">
+                           
+                        </div>
+                        <div class="zhong1 zhong37">
+                           
+                        </div>
+                        <div class="zhong1 zhong38">
+                            
+                        </div>
+                    </div>
+                    <div class="xia">
+                         <dl>
+                           <dd><a href="#"><img src="images/dd/17.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/18.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/19.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/20.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/21.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/22.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/23.jpg" alt="" /></a></dd>
+                           <dd style="border-right:0;"><a href="#"><img src="images/dd/24.jpg" alt="" /></a></dd>
+                       </dl>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div>
+    <div id="shuizu">
+        <div class="container">
+            <div class="shangpin1">
+                <div class="zuo fl">
+                    <i class="shuizu1"></i>
+                   <h2><a href="#">水族商品</a></h2>
+                   <div class="zuo1">
+                     <a href="#"><img src="images/gg/003.jpg" alt="" /></a>
+                   </div>
+                </div>
+                <div class="you youyyyy fr">
+                    <h2>波奇推荐</h2>
+                </div>
+                <div class="zhong fl">
+                    <ul id="bss">
+                        <li><a href="#">鱼缸</a></li>
+                        <li><a href="#">鱼饲料</a></li>
+                        <li><a href="#">药水</a></li>
+                        <li><a href="#">过滤材料</a></li>
+                        <li><a href="#">氧气泵</a></li>
+                        <li><a href="#">潜水泵</a></li>
+                        <li><a href="#">温控设备</a></li>
+                        <li><a href="#">造景装饰</a></li>
+                    </ul>
+                    <div id="dss">
+                        <div class="zhong1 zhong21" style="display:block;">
+
+                        </div>
+                        <div class="zhong1 zhong22">
+                            
+                        </div>
+                        <div class="zhong1 zhong23">
+                           
+                        </div>
+                        <div class="zhong1 zhong24">
+                           
+                        </div>
+                        <div class="zhong1 zhong25">
+                            
+                        </div>
+                        <div class="zhong1 zhong26">
+                           
+                        </div>
+                        <div class="zhong1 zhong27">
+                           
+                        </div>
+                        <div class="zhong1 zhong28">
+                           
+                        </div>
+                    </div>
+                    <div class="xia">
+                         <dl>
+                           <dd><a href="#"><img src="images/dd/25.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/26.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/27.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/28.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/29.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/30.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/31.jpg" alt="" /></a></dd>
+                           <dd style="border-right:0;"><a href="#"><img src="images/dd/32.jpg" alt="" /></a></dd>
+                       </dl>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div>
+    <div id="pachong">
+        <div class="container">
+            <div class="shangpin1">
+                <div class="zuo fl">
+                   <i class="pachong1"></i>
+                   <h2><a href="#">爬虫商品</a></h2>
+                   <div class="zuo1">
+                     <a href="#"><img src="images/gg/005.jpg" alt="" /></a>
+                   </div>
+                </div>
+                <div class="you youyyyyy fr">
+                    <h2>波奇推荐</h2>
+                </div>
+                <div class="zhong fl">
+                    <ul id="bte">
+                        <li><a href="#">陆龟用品</a></li>
+                        <li><a href="#">水龟用品</a></li>
+                        <li><a href="#">其他类</a></li>
+                    </ul>
+                    <div id="dd">
+                        <div class="zhong1 zhong41" style="display:block;">
+
+                        </div>
+                        <div class="zhong1 zhong42">
+                            
+                        </div>
+                        <div class="zhong1 zhong43">
+                           
+                        </div>
+                        <div class="zhong1 zhong44">
+                          
+                        </div>
+                    </div>
+                    <div class="xia">
+                         <dl>
+                           <dd><a href="#"><img src="images/dd/33.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/34.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/35.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/36.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/37.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/38.jpg" alt="" /></a></dd>
+                           <dd><a href="#"><img src="images/dd/39.jpg" alt="" /></a></dd>
+                           <dd style="border-right:0;"><a href="#"><img src="images/dd/40.jpg" alt="" /></a></dd>
+                       </dl>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div>
+    <div id="pinglun">
+        <div class="container">
+            <div class="zuu fl">
+                
+                <h2><a href="#"><img src="images/wen.png" alt="" />热门评论</a></h2>
+                <a href=""><img src="images/pinglun.png" alt="" /></a>
+            </div>
+            <div class="you fr">
+                <h2><a href="#">关注我们</a></h2>
+                <a href="#"><img src="images/wei.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+    <div id="zhengpin">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/1.png" alt="" />
+                    <h2><a href="#">正品保障</a></h2>
+                    <span>全场正品&nbsp;&nbsp;</span><span>假一罚十</span>
+                </li>
+                <li>
+                     <img src="images/2.png" alt="" />
+                      <h2><a href="#">闪电发货</a></h2>
+                    <span>&nbsp;&nbsp;&nbsp;7省满59免运费</span>
+                </li>
+                <li>
+                     <img src="images/3.png" alt="" />
+                     <h2><a href="#">无忧退货</a></h2>
+                    <span>七天退货&nbsp;&nbsp;</span><span>购买无忧</span>
+                </li>
+                <li>
+                     <img src="images/4.png" alt="" />
+                     <h2><a href="#">优质服务</a></h2>
+                    <span>品类丰富&nbsp;&nbsp;</span><span>多快好省</span>
+                </li>
+                <li>
+                     <img src="images/5.png" alt="" />
+                     <h2><a href="#">诚信电商</a></h2>
+                    <span>宠友放心&nbsp;&nbsp;</span><span>值得信赖</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="youzheng">
+        <div class="container">
+            <dl>
+                <dt><a href="#">新手上路</a></dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">现金账户</a></dd>
+                <dd><a href="#">优惠券</a></dd>
+                <dd><a href="#">订单查询</a></dd>
+                <dd><a href="#">服务协议</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">购买方式</a></dt>
+                <dd><a href="#">余额支付</a></dd>
+                <dd><a href="#">网上支付</a></dd>
+                <dd><a href="#">银行汇款</a></dd>
+                <dd><a href="#">货到汇款</a></dd>
+                <dd><a href="#">货到付款</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">派送方式</a></dt>
+                <dd><a href="#">派送方式</a></dd>
+                <dd><a href="#">收费标注</a></dd>
+                <dd><a href="#">派送时间</a></dd>
+                
+            </dl>
+            <dl>
+                <dt><a href="#">售后方式</a></dt>
+                <dd><a href="#">如何退换货</a></dd>
+                <dd><a href="#">如何退货</a></dd>
+                <dd><a href="#">退货流程</a></dd>
+                <dd><a href="#">客服电话</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">常见问题</a></dt>
+                <dd><a href="#">注册登录</a></dd>
+                <dd><a href="#">波奇豆</a></dd>
+                <dd><a href="#">热点问题</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p><a href="#">关于波奇</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">友情链接</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">诚聘英才</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">意见反馈</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">帮助中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">客服热线：400-820-6098</a>
+            <p>泸公安备案 31011502004955号 &nbsp;&nbsp;|&nbsp;&nbsp; 泸ICP备13034501号-2 &nbsp;&nbsp;|&nbsp;&nbsp; 增值电信业务经营许可证 ： 泸B2-20140120</p>
+            <p>Copyright © 2007 -2018 Boqii.com All Rights Rwserved 光橙(上海)信息科技有限公司 版权所有</p>
+            <p><a href="#"><img src="images/foot_gs.png" alt="" /></a><a href="#"><img src="images/foot_cx.png" alt="" /></a><a href="#"><img src="images/foot_kx.png" alt="#" /></a><a href="#"><img src="images/foot_zx.png" alt="" /></a></p>
+        </div>
+    </div>
+    <div id="guding"> 
+        <ul class="ding">
+            <i class="gw"></i>
+            <li class="gouwu"><a href="#">购物车</a></li>
+            <i class="zc"></i>
+            <li class="zican"><a href="#">资产</a></li>
+            <i class="cc"></i>
+            <li class="zican"><a href="#">收藏</a></li>
+            <i class="zx"></i>
+            <li class="zican"><a href="#">咨询</a></li>
+            <i class="ap"></i>
+            <li class="zican"><a href="#">APP</a></li>
+            <i class="to"></i>
+            <li class="top"><a href="#">TOP</a></li>
+        </ul>
+    </div>
+</body>
+</html>
