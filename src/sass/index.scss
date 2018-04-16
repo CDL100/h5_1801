@@ -1,0 +1,152 @@
+#header
+  height: 36px
+  border-bottom: 1px solid #ccc
+  .container
+    line-height: 36px
+    .zuo
+      ul li
+        float: left
+        /*height: 36px;
+        font-weight: bold
+        font-family: "宋体"
+        padding-left: 35px
+        position: relative
+      .shou
+        display: block
+        width: 16px
+        height: 17px
+        background: url("../images/btm.fw.png") -205px -45px
+        position: absolute
+        top: 9px
+        left: 110px
+      .guang
+        display: block
+        width: 11px
+        height: 18px
+        background: url("../images/btm.fw.png") -241px -45px
+        position: absolute
+        top: 10px
+        left: 316px
+    .you
+      li
+        &:hover
+          .shoujiban, .boqi
+            display: block
+        float: left
+        font-size: 14px
+        font-weight: bold
+        font-family: "宋体"
+        position: relative
+        transition: background 0.2s linear
+        span
+          padding: 0 10px
+      .shoujiban
+        width: 242px
+        height: 200px
+        border: 1px solid #ccc
+        background: #fff
+        position: absolute
+        top: 36px
+        left: -184px
+        display: none
+  .shoujiban
+    ul li
+      float: left
+      width: 100px
+      height: 150px
+      margin: 10px
+    img
+      text-align: center
+      width: 100px
+      height: 100px
+      margin-top: 45px
+      margin-left: 10px
+    span
+      font-size: 12px
+      font-weight: bold
+      font-family: "宋体"
+    .anzhuo
+      display: block
+      width: 89px
+      height: 29px
+      background: url("../images/btm.fw.png") no-repeat
+      position: absolute
+      top: 116px
+      left: 10px
+      &:hover
+        background: url("../images/btm.fw.png") -100px -42px
+    .pingguo
+      &:hover
+        background: url("../images/btm.fw.png") 0 -40px
+      display: block
+      width: 90px
+      height: 28px
+      background: url("../images/btm.fw.png") -97px 0
+      position: absolute
+      top: 156px
+      left: 10px
+  .container .boqi
+    background: #fff
+    width: 200px
+    height: 180px
+    border: 1px solid #ccc
+    position: absolute
+    top: 36px
+    left: -13px
+    display: none
+    .p1 a
+      color: #EE5533
+      font-family: "宋体"
+    li
+      float: left
+      padding: 9px
+      margin-top: 20px
+  .you .shoufen
+    display: block
+    width: 15px
+    height: 13px
+    background: url("../images/btm.fw.png") -275px -48px
+    position: absolute
+    top: 12px
+    right: 160px
+  .container .you li:hover .souye
+    display: block
+  .you
+    .souye
+      width: 125px
+      height: 125px
+      background: #fff
+      border: 1px solid #ccc
+      position: absolute
+      top: 36px
+      left: -13px
+      padding-top: 10px
+      display: none
+      p
+        padding-left: 45px
+        font-family: "宋体"
+        font-weight: 100
+    .fu
+      display: block
+      width: 19px
+      height: 17px
+      background: url("../images/btm.fw.png") -306px -47px
+      position: absolute
+      top: 20px
+      right: 89px
+    .lun
+      display: block
+      width: 17px
+      height: 17px
+      background: url("../images/btm.fw.png") -340px -49px
+      position: absolute
+      top: 60px
+      right: 89px
+    .chong
+      display: block
+      width: 15px
+      height: 17px
+      background: url("../images/btm.fw.png") -374px -47px
+      position: absolute
+      top: 93px
+      right: 89px

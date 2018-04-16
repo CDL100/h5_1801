@@ -1,0 +1,118 @@
+
+#header .container{
+    height: 38px;
+     width: 940px;
+
+}
+#header .container .zuo li{
+    float: left;
+    height: 38px;
+    padding:0 10px;
+     line-height: 38px;
+
+}
+#header .container .you li{
+    float: left;
+    padding:0 10px;
+    height: 38px;
+    line-height: 38px;
+}
+
+/**********888888888*/
+#logo {
+     background: #F3F3F3;
+     position:relative;
+}
+#logo .container{
+    height: 122px;
+     width: 940px;
+}
+#logo .container li:nth-child(3){
+    float:right;
+}
+#logo .container li h2{
+    /*line-height: 120px;*/
+    /*margin-left:30px;*/
+    font-size: 30px;
+    position:absolute ;
+    top:36px;
+    left:520px;
+}
+#logo .container .p1{
+line-height:205px;
+font-size: 12px;
+font-family: "宋体";
+}
+#logo .container .p1 a{
+    /*display: block;*/
+    color: blue;
+}
+/***************************min*******************
+ */
+#min{
+     background: #F3F3F3;height:375px;
+}
+#min .container{
+    width: 940px;
+    height:372px;
+    border:1px solid #ccc;
+    background:#fff;
+}
+#min .container .zuo{
+    height:370px;
+    width:400px;
+    /*background:#ccc;*/
+    margin-right:35px;
+}
+#min .container img{
+    /*display:block;*/
+      height:370px;
+    width:400px;
+}
+#min .container .zuo .form-control{
+    width:280px;
+    margin-left:82px;
+    margin-top:60px;
+}
+#min .container .you{
+    height:370px;
+    width:400px;
+    /*background:#ccc;*/
+    margin-left: 35px;
+    /*margin-top:80px; margin-left:20px;*/
+}
+#min .container .zuo label{
+float:left;
+margin-top:7px;
+margin-left:20px;
+color:;
+font-family: "宋体";
+ font-weight:500;
+}
+#min .container .zuo .btn{
+    width:200px;
+    margin-left:150px;
+}
+#min .container .zuo .btn{
+    width:200px;
+    margin-left:115px;
+    margin-top:40px;
+}
+
+/* ********底部*********/
+#footer .container {
+    height: 130px;
+    /*background:#F3F3F3;*/
+}
+#footer .container p{
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}
+#footer .container img{
+    /*display:block;*/
+    margin-left:8px;
+}
+/*#footer .container .p1{
+    margin-left:263px;
+}*/
